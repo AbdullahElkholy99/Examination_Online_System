@@ -1,7 +1,8 @@
-Online Examination System
+## Online Examination System
 An Online Examination System built using ASP.NET Core MVC and SQL Server, designed to manage exams, students, instructors, and results in a secure and scalable way.
-________________________________________Features
- 1. Student Module
+________________________________________
+### Features
+#### 1. Student Module
 •	Select student profile
 •	View enrolled courses
 •	Start exams with timer
@@ -11,7 +12,8 @@ ________________________________________Features
 •	Review exam answers (correct / wrong)
 •	See score per question
 •	Track progress with charts
-2. Admin Module
+
+#### 2. Admin Module
 •	Admin dashboard with statistics
 •	Manage students (Create / Update / Delete)
 •	Manage instructors
@@ -22,13 +24,15 @@ ________________________________________Features
 •	Assign exams to courses
 •	Control exam duration
 •	Pass / Fail grading policy
-________________________________________3. Security & Exam Control
+
+#### 3. Security & Exam Control
 •	Session-based authentication
 •	Server-side exam timer
 •	Auto-submit on timeout
 •	Disable page refresh & back navigation
 •	Prevent exam access after submission
-________________________________________4. Database Design
+
+#### 4. Database Design
 •	SQL Server database
 •	Normalized relational schema
 •	Stored Procedures for:
@@ -36,18 +40,19 @@ o	CRUD operations
 o	Exam attempts
 o	Student answers
 •	Strong FK constraints & composite keys
+
+### Technologies Used
+Technology              	Description
+ASP.NET Core MVC	        Backend framework
+Entity Framework Core   	ORM
+SQL Server              	Database
+Stored Procedures	       Data access
+C#	                      Programming language
+Bootstrap 5	             UI styling
+JavaScript	Client-side   behavior
 ________________________________________
- Technologies Used
-Technology	Description
-ASP.NET Core MVC	Backend framework
-Entity Framework Core	ORM
-SQL Server	Database
-Stored Procedures	Data access
-C#	Programming language
-Bootstrap 5	UI styling
-JavaScript	Client-side behavior
-________________________________________ Project Structure
-ExamOnline.MVC
+## Project Structure
+#### ExamOnline.MVC
 │
 ├── Controllers
 ├── Models
@@ -56,10 +61,12 @@ ExamOnline.MVC
 ├── Repositories
 ├── Views
 ├── wwwroot
-│   ├── css
-│   └── js
+   ├── css
+   └── js
  
-________________________________________ How to Run the Project
+________________________________________ 
+
+### How to Run the Project
 1.	Clone the repository
 git clone https://github.com/your-username/Online-Examination-System.git
 2.	Open the project in Visual Studio
@@ -70,7 +77,8 @@ git clone https://github.com/your-username/Online-Examination-System.git
 }
 5.	Run the project 
 ________________________________________
- Learning Outcomes
+
+### Learning Outcomes
 •	MVC Architecture
 •	Repository Pattern
 •	Stored Procedures with EF Core
@@ -78,16 +86,21 @@ ________________________________________
 •	Real-world exam logic
 •	Clean & scalable code structure
 ________________________________________
- Future Enhancements
+
+### Future Enhancements
 •	Authentication with Identity
 •	Role-based authorization
 •	Question randomization
 •	Online proctoring
 •	Export results (PDF / Excel)
 •	Notifications system
-________________________________________Author
+________________________________________
+
+### Author
 Abdullah Ali Elkhoyl
 •	LinkedIn: https://www.linkedin.com/in/abdullah-ali-elkholy/
-________________________________________ Support
+________________________________________
+
+### Support
 If you like this project, give it a ⭐ on GitHub!
 
