@@ -1,0 +1,40 @@
+﻿@model AssignCourseVM
+@{
+    Layout = "_AdminLayout";
+}
+
+<h2 class="mb-4">📚 Assign Course to Student</h2>
+
+@if (TempData["Success"] != null)
+{
+    <div class="alert alert-success">
+        @TempData["Success"]
+    </div>
+}
+
+<form method="post" class="card p-4 shadow-sm">
+
+    <div class="mb-3">
+        <label class="form-label">Student</label>
+        <select asp-for="StudentId"
+                asp-items="Model.Students"
+                class="form-select"
+                required>
+            <option value="">-- Select Student --</option>
+        </select>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Course</label>
+        <select asp-for="CourseId"
+                asp-items="Model.Courses"
+                class="form-select"
+                required>
+            <option value="">-- Select Course --</option>
+        </select>
+    </div>
+
+    <button class="btn btn-primary">
+        ➕ Assign Course
+    </button>
+</form>

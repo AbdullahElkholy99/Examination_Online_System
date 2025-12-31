@@ -1,0 +1,70 @@
+﻿@model List<QuestionReviewVM>
+@{
+    Layout = "_StudentLayout";
+}
+
+<h2 class="mb-4">📝 Exam Review</h2>
+
+@foreach (var q in Model)
+{
+    <div class="card mb-4 shadow-sm">
+        <div class="card-body">
+
+            <h5 class="mb-2">@q.QuestionText</h5>
+
+            <p>
+                <strong>Score:</strong>
+                <span class="badge bg-info">
+                    @q.AwardedMarks / @q.Marks
+                </span>
+            </p>
+
+            <ul class="list-group mb-3">
+                @foreach (var c in q.Choices)
+                {
+                    string css = "list-group-item d-flex justify-content-between align-items-center";
+
+                    if (c.IsCorrect)
+                        css += " list-group-item-success";
+
+                    if (c.IsStudentChoice && !c.IsCorrect)
+                        css += " list-group-item-danger";
+
+                    <li class="@css">
+                        <span>@c.ChoiceText</span>
+
+                        <span>
+                            @if (c.IsCorrect && c.IsStudentChoice)
+                            {
+                                <span class="badge bg-success">
+                                    ✔ Correct (Your Answer)
+                                </span>
+                            }
+                            else if (c.IsCorrect)
+                            {
+                                <span class="badge bg-success">
+                                    ✔ Correct Answer
+                                </span>
+                            }
+                            else if (c.IsStudentChoice)
+                            {
+                                <span class="badge bg-danger">
+                                    ❌ Your Answer
+                                </span>
+                            }
+                        </span>
+                    </li>
+                }
+            </ul>
+
+            @if (!string.IsNullOrEmpty(q.Explanation))
+            {
+                <div class="alert alert-info">
+                    <strong>Explanation:</strong><br />
+                    @q.Explanation
+                </div>
+            }
+
+        </div>
+    </div>
+}

@@ -1,0 +1,40 @@
+﻿body {
+    background: linear-gradient(135deg, #1d2671, #c33764);
+    min-height: 100vh;
+}
+
+.role-card {
+    backdrop-filter: blur(12px);
+    background: rgba(255,255,255,0.15);
+    border-radius: 20px;
+    padding: 40px;
+    color: #fff;
+    transition: all 0.4s ease;
+    cursor: pointer;
+}
+
+    .role-card:hover {
+        transform: translateY(-12px) scale(1.03);
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    }
+
+.role-icon {
+    font-size: 70px;
+    margin-bottom: 20px;
+}
+
+.fade-in {
+    animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

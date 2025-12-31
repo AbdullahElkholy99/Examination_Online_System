@@ -1,0 +1,35 @@
+﻿@model List<CourseDTO>
+@{
+    Layout = "_AdminLayout";
+}
+
+<h2>📚 Courses</h2>
+
+<a asp-action="Create" class="btn btn-primary mb-3">➕ Add Course</a>
+
+<table class="table table-bordered shadow">
+    <thead class="table-dark">
+        <tr>
+            <th>Name</th>
+            <th>Duration</th>
+            <th>Instructor</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var c in Model)
+        {
+            <tr>
+                <td>@c.Name</td>
+                <td>@c.Duration</td>
+                <td>@c.Instructor_Id</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@c.Id" class="btn btn-sm btn-warning">✏</a>
+                    <a asp-action="Delete" asp-route-id="@c.Id"
+                       onclick="return confirm('Delete course?')"
+                       class="btn btn-sm btn-danger">🗑</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

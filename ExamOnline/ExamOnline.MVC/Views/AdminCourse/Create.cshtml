@@ -1,0 +1,57 @@
+﻿@model CreateCourseVM
+@{
+    Layout = "_AdminLayout";
+}
+
+<h2 class="mb-4">📚 Create New Course</h2>
+
+<div class="card shadow-sm">
+    <div class="card-body">
+
+        <form method="post" asp-action="Create" asp-controller="AdminCourse">
+
+            <!-- Course Name -->
+            <div class="mb-3">
+                <label class="form-label">Course Name</label>
+                <input asp-for="Name"
+                       class="form-control"
+                       placeholder="Enter course name"
+                       required />
+            </div>
+
+            <!-- Duration -->
+            <div class="mb-3">
+                <label class="form-label">Duration (Hours)</label>
+                <input asp-for="Duration"
+                       type="number"
+                       class="form-control"
+                       placeholder="e.g. 30" required />
+            </div>
+
+            <!-- Instructor -->
+            <div class="mb-3">
+                <label class="form-label">Instructor</label>
+                <select asp-for="InstructorId"
+                        asp-items="Model.Instructors"
+                        class="form-select"
+                        required>
+                    <option value="">-- Select Instructor --</option>
+                </select>
+            </div>
+
+            <!-- Actions -->
+            <div class="d-flex gap-2">
+                <button class="btn btn-success">
+                    ➕ Create Course
+                </button>
+
+                <a asp-action="Index"
+                   class="btn btn-secondary">
+                    Cancel
+                </a>
+            </div>
+
+        </form>
+
+    </div>
+</div>

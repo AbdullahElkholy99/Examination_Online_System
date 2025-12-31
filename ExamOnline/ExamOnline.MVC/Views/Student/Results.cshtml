@@ -1,0 +1,74 @@
+﻿@model StudentResultsVM
+@{
+    Layout = "_StudentLayout";
+}
+
+
+<link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+
+<div class="container my-4">
+
+    <h2 class="mb-3">📊 Student Results</h2>
+
+    <!-- Student Info -->
+    <div class="card mb-4 shadow-sm">
+        <div class="card-body">
+            <h5>@Model.Student.Name</h5>
+            <p class="mb-1"><strong>Branch:</strong> @Model.Student.Branch.Name</p>
+            <p><strong>Track:</strong> @Model.Student.Track.Name</p>
+        </div>
+    </div>
+
+    <!-- Results Table -->
+    <div class="table-responsive">
+        <table class="table table-bordered align-middle text-center">
+            <thead class="table-dark">
+                <tr>
+                    <th>Course</th>
+                    <th>Exam Status</th>
+                    <th>Grade</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var c in Model.Courses)
+                {
+                    <tr>
+                        <td>@c.CourseName</td>
+
+                        <td>
+                            @if (c.IsTaken && c.ExamId != null)
+                            {
+                                <a asp-controller="Student"
+                                   asp-action="Review"
+                                   asp-route-examId="@c.ExamId"
+                                   class="btn btn-outline-primary btn-sm">
+                                      Review Exam
+                                </a>
+                            }
+                            else
+                            {
+                                <span class="text-muted">Not Available</span>
+                            }
+
+                        </td>
+
+                        <td>
+                            @if (c.IsTaken && c.ExamId != null)
+                            {
+                                <span class="fw-bold text-primary">
+                                    @c.Grade
+                                </span>
+                            }
+                            else
+                            {
+                                <span class="text-muted">—</span>
+                            }
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+</div>

@@ -1,0 +1,98 @@
+﻿@{
+    Layout = "_AdminLayout";
+}
+<link href="~/css/admin-dashboard.css" rel="stylesheet" />
+
+<h2 class="mb-4">📊 Admin Dashboard</h2>
+<p class="text-muted mb-4">System overview & statistics</p>
+
+<div class="row g-4">
+
+    <!-- Students -->
+    <div class="col-lg-3 col-md-6">
+        <div class="stat-card blue">
+            <div class="stat-icon">👨‍🎓</div>
+            <div class="stat-info">
+                <h3>@ViewBag.StudentCount</h3>
+                <span>Students</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Instructors -->
+    <div class="col-lg-3 col-md-6">
+        <div class="stat-card green">
+            <div class="stat-icon">👨‍🏫</div>
+            <div class="stat-info">
+                <h3>@ViewBag.InstructorCount</h3>
+                <span>Instructors</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Courses -->
+    <div class="col-lg-3 col-md-6">
+        <div class="stat-card orange">
+            <div class="stat-icon">📚</div>
+            <div class="stat-info">
+                <h3>@ViewBag.CourseCount</h3>
+                <span>Courses</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Exams -->
+    <div class="col-lg-3 col-md-6">
+        <div class="stat-card red">
+            <div class="stat-icon">📝</div>
+            <div class="stat-info">
+                <h3>@ViewBag.ExamCount</h3>
+                <span>Exams</span>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<hr class="my-5" />
+
+
+
+
+<h4 class="mb-3"> Quick Actions</h4>
+
+<div class="row g-3">
+
+    <div class="col-md-3">
+        <a asp-controller="AdminStudent"
+           asp-action="Index"
+           class="btn btn-outline-primary w-100">
+            👥 Manage Students
+        </a>
+    </div>
+
+    <div class="col-md-3">
+        <a asp-controller="AdminInstructor"
+           asp-action="Index"
+           class="btn btn-outline-success w-100">
+            👨‍🏫 Manage Instructors
+        </a>
+    </div>
+
+    <div class="col-md-3">
+        <a asp-controller="AdminCourse"
+           asp-action="Index"
+           class="btn btn-outline-warning w-100">
+            📚 Manage Courses
+        </a>
+    </div>
+
+    <div class="col-md-3">
+        <a asp-controller="AdminExam"
+           asp-action="Index"
+           class="btn btn-outline-danger w-100">
+            📝 Manage Exams
+        </a>
+    </div>
+
+</div>

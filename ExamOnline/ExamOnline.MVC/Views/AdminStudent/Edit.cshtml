@@ -1,0 +1,33 @@
+﻿@using ExamOnline.MVC.DTO.Users
+@model StudentDTO
+@{
+    Layout = "_AdminLayout";
+}
+
+<h2>Edit Student</h2>
+
+<form method="post">
+    <input type="hidden" asp-for="ID" />
+
+    <div class="mb-3">
+        <label>Name</label>
+        <input asp-for="Name" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label>Email</label>
+        <input asp-for="Email" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label>Branch ID</label>
+        <input asp-for="Branch_ID" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label>Track ID</label>
+        <input asp-for="Track_ID" class="form-control" />
+    </div>
+
+    <button class="btn btn-primary">Update</button>
+</form>

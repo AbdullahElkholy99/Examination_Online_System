@@ -1,0 +1,86 @@
+﻿@using ExamOnline.MVC.DTO.Users
+@model StudentCreationDTO
+@{
+    Layout = "_AdminLayout";
+}
+
+<h2>Add Student</h2>
+
+<form method="post" asp-action="Create" asp-controller="AdminStudent">
+    <div class="mb-3">
+        <label>Name</label>
+        <input asp-for="Name" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label>Email</label>
+        <input asp-for="Email" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label>Phone</label>
+        <input asp-for="Phone" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label>Address</label>
+        <input asp-for="Address" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label>Branch</label>
+        <select asp-for="Branch_ID"
+                asp-items="Model.Branches"
+                class="form-select">
+            <option value="">-- Select Branch --</option>
+        </select>
+    </div>
+
+    <div class="mb-3">
+        <label>Track</label>
+        <select asp-for="Track_ID" class="form-select">
+            <option value="">-- Select Track --</option>
+        </select>
+    </div>
+
+
+    <button class="btn btn-success">💾 Save</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+
+
+</form>
+
+@section Scripts {
+<script>
+    $(document).ready(function () {
+
+        $('#Branch_ID').change(function () {
+            var branchId = $(this).val();
+            var trackDropdown = $('#Track_ID');
+
+            trackDropdown.empty();
+            trackDropdown.append('<option value="">-- Select Track --</option>');
+
+            if (branchId) {
+                $.get('/AdminStudent/GetTracksByBranch', { branchId: branchId })
+                    .done(function (data) {
+                        console.log("Done");
+
+                        $.each(data, function (i, track) {
+                            trackDropdown.append(
+                                $('<option></option>')
+                                    .val(track.id)
+                                    .text(track.name)
+                            );
+                                console.log(trackDropdown.html());
+
+                        });
+                    })
+                    .fail(function () {
+                        alert('Error loading tracks');
+                    });
+            }
+        });
+
+    });
+</script>
+}

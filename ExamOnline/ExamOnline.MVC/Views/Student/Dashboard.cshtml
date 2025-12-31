@@ -1,0 +1,87 @@
+﻿@{
+    Layout = "_StudentLayout";
+
+}
+
+<link rel="stylesheet" href="~/css/student-dashboard.css" />
+
+<h2 class="mb-4">👨‍🎓 Student Dashboard</h2>
+
+@* ===============================
+   SHOW SELECT CONTAINER ONLY IF NO STUDENT SELECTED
+   =============================== *@
+@if (ViewBag.SelectedStudentId == null)
+{
+    <div class="student-selector mb-4">
+
+        <h5>👤 Select Student</h5>
+
+        <form asp-action="SelectStudent"
+              asp-controller="Student"
+              method="post">
+
+            <select class="form-select"
+                    name="studentId"
+                    asp-items="ViewBag.StudentList"
+                    onchange="this.form.submit()">
+                <option value="">-- Choose Student --</option>
+            </select>
+
+        </form>
+    </div>
+
+    <div class="alert alert-warning">
+        ⚠️ Please select a student to continue.
+    </div>
+}
+else
+{
+    @* ===============================
+       STUDENT SELECTED → SHOW DASHBOARD
+       =============================== *@
+
+   @*  var selected =
+        ((IEnumerable<dynamic>)ViewBag.Students)
+        .First(s => s.Id == ViewBag.SelectedStudentId);
+
+    <div class="alert alert-success mb-4">
+        👋 Welcome, <strong>@selected.Name</strong>
+    </div>
+ *@
+    <div class="row g-4">
+
+        <div class="col-lg-4 col-md-6">
+            <div class="card shadow text-center p-4">
+                <h4>📚 My Courses</h4>
+                <a asp-controller="Student"
+                   asp-action="Courses"
+                   class="btn btn-primary mt-3">
+                    View Courses
+                </a>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+            <div class="card shadow text-center p-4">
+                <h4>📊 My Results</h4>
+                <a asp-controller="Student"
+                   asp-action="Results"
+                   class="btn btn-success mt-3">
+                    View Results
+                </a>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+            <div class="card shadow text-center p-4">
+                <h4>📈 Progress</h4>
+                <a asp-controller="Student"
+                   asp-action="Progress"
+                   class="btn btn-warning text-white mt-3">
+                    View Progress
+                </a>
+            </div>
+        </div>
+
+    </div>
+}

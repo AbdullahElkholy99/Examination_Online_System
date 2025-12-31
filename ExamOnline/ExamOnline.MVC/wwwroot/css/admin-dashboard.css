@@ -1,0 +1,130 @@
+﻿/* ===== Page Title ===== */
+h2 {
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.text-muted {
+    font-size: 14px;
+}
+
+/* ===== Stat Cards ===== */
+.stat-card {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 28px;
+    border-radius: 18px;
+    color: #fff;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.18);
+    transition: all 0.35s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+    .stat-card::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(255,255,255,0.08);
+        opacity: 0;
+        transition: 0.3s;
+    }
+
+    .stat-card:hover::after {
+        opacity: 1;
+    }
+
+    .stat-card:hover {
+        transform: translateY(-8px) scale(1.02);
+    }
+
+.stat-icon {
+    font-size: 46px;
+    opacity: 0.95;
+}
+
+.stat-info h3 {
+    margin: 0;
+    font-size: 34px;
+    font-weight: 800;
+}
+
+.stat-info span {
+    font-size: 14px;
+    opacity: 0.9;
+    letter-spacing: 0.3px;
+}
+
+/* ===== Card Colors ===== */
+.stat-card.blue {
+    background: linear-gradient(135deg, #2563eb, #1e3a8a);
+}
+
+.stat-card.green {
+    background: linear-gradient(135deg, #16a34a, #14532d);
+}
+
+.stat-card.orange {
+    background: linear-gradient(135deg, #f59e0b, #b45309);
+}
+
+.stat-card.red {
+    background: linear-gradient(135deg, #dc2626, #7f1d1d);
+}
+
+/* ===== Divider ===== */
+hr {
+    border-top: 1px dashed #d1d5db;
+}
+
+/* ===== Quick Actions ===== */
+h4 {
+    font-weight: 600;
+}
+
+.btn-outline-primary,
+.btn-outline-success,
+.btn-outline-warning,
+.btn-outline-danger {
+    font-weight: 600;
+    padding: 14px;
+    border-radius: 14px;
+    transition: 0.3s;
+}
+
+    .btn-outline-primary:hover {
+        background: #2563eb;
+        color: #fff;
+    }
+
+    .btn-outline-success:hover {
+        background: #16a34a;
+        color: #fff;
+    }
+
+    .btn-outline-warning:hover {
+        background: #f59e0b;
+        color: #fff;
+    }
+
+    .btn-outline-danger:hover {
+        background: #dc2626;
+        color: #fff;
+    }
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+    .stat-card {
+        padding: 22px;
+    }
+
+    .stat-info h3 {
+        font-size: 28px;
+    }
+
+    .stat-icon {
+        font-size: 40px;
+    }
+}

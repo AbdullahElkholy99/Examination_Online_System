@@ -1,0 +1,53 @@
+﻿body {
+    background: #f3f4f6;
+}
+
+/* Sidebar */
+.admin-sidebar {
+    width: 260px;
+    background: #111827;
+    color: #fff;
+    min-height: 100vh;
+}
+
+.admin-header {
+    text-align: center;
+    padding: 20px;
+    background: #020617;
+}
+
+    .admin-header h4 {
+        margin-bottom: 4px;
+    }
+
+/* Menu */
+.admin-menu {
+    padding: 15px;
+}
+
+    .admin-menu .nav-link {
+        color: black;
+        padding: 12px;
+        border-radius: 8px;
+        margin-bottom: 8px;
+        font-weight: 500;
+    }
+
+        .admin-menu .nav-link:hover,
+        .admin-menu .nav-link.active {
+            background: #2563eb;
+            color: #fff;
+        }
+
+/* Content */
+.admin-content {
+    margin-left: 260px;
+    padding: 25px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .admin-content {
+        margin-left: 0;
+    }
+}

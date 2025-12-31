@@ -1,0 +1,9 @@
+﻿.list - group - item - success {
+    background - color: #d1fae5;
+    border - color: #10b981;
+}
+
+.list - group - item - danger {
+    background - color: #fee2e2;
+    border - color: #ef4444;
+}

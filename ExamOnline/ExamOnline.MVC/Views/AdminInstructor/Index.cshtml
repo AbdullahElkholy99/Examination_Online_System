@@ -1,0 +1,36 @@
+﻿@model List<InstructorDTO>
+@{
+    Layout = "_AdminLayout";
+}
+
+<h2>👨‍🏫 Instructors</h2>
+
+<a asp-action="Create"  class="btn btn-primary mb-3">➕ Add Instructor</a>
+
+<table class="table table-bordered shadow">
+    <thead class="table-dark">
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Branch</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var i in Model)
+        {
+            <tr>
+                <td>@i.Name</td>
+                <td>@i.Email</td>
+                <td>@i.BranchName</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@i.ID"
+                       class="btn btn-sm btn-warning">✏</a>
+                    <a asp-action="Delete" asp-route-id="@i.ID"
+                       onclick="return confirm('Delete instructor?')"
+                       class="btn btn-sm btn-danger">🗑</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

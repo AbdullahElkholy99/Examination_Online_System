@@ -1,0 +1,56 @@
+﻿@model CreateExamVM
+ @{
+    Layout = "_AdminLayout";
+}
+
+<h2 class="mb-4">Create Exam</h2>
+
+<div class="card shadow-sm">
+    <div class="card-body">
+
+        <form method="post">
+
+            <div class="mb-3">
+                <label class="form-label">Course</label>
+                <select asp-for="CourseId" asp-items="Model.Courses" class="form-select" required>
+                    <option value="">-- Select Course --</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Exam Type</label>
+                <select asp-for="Type"
+                        class="form-select">
+                    <option>MCQ</option>
+                    <option>TrueFalse</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Total Marks</label>
+                <input asp-for="TotalMarks"
+                       type="number"
+                       class="form-control"
+                       required />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Duration (Minutes)</label>
+                <input asp-for="DurationMinutes"
+                       type="number"
+                       class="form-control" />
+            </div>
+
+            <button class="btn btn-success">
+                ➕ Create Exam
+            </button>
+
+            <a asp-action="Index"
+               class="btn btn-secondary">
+                Cancel
+            </a>
+
+        </form>
+
+    </div>
+</div>

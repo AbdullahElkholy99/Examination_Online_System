@@ -1,0 +1,74 @@
+﻿@model List<ExamDTO>
+@{
+    Layout = "_AdminLayout";
+}
+
+<h2 class="mb-4">📝 Exams Management</h2>
+
+<div class="mb-3 text-end">
+    <a asp-action="CreateExam"
+       class="btn btn-success">
+        ➕ Create New Exam
+    </a>
+</div>
+
+<div class="card shadow-sm">
+    <div class="card-body">
+
+        <table class="table table-hover align-middle">
+            <thead class="table-dark">
+                <tr>
+                    <th>#</th>
+                    <th>Course Name</th>
+                    <th>Type</th>
+                    <th>Total Marks</th>
+                    <th>CreatedAt</th>
+                    <th>UpdatedAt</th>
+                    <th class="text-center">Actions</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @if (!Model.Any())
+                {
+                    <tr>
+                        <td colspan="8" class="text-center text-muted">
+                            No exams found.
+                        </td>
+                    </tr>
+                }
+                else
+                {
+                    foreach (var exam in Model)
+                    {
+                        <tr>
+                            <td>@exam.ID</td>
+                            <td>@exam.CourseName</td>
+                            <td>@exam.Type</td>
+                            <td>@exam.Total_Marks</td>
+                            <td>@exam.CreatedAt.ToString("dd/MM/yyyy HH:mm")</td>
+                            <td>@exam.UpdatedAt.ToString("dd/MM/yyyy HH:mm")</td>
+
+                            <td class="text-center">
+                                <a asp-action="Details"
+                                   asp-route-id="@exam.ID"
+                                   class="btn btn-sm btn-outline-primary">
+                                    👁 View
+                                </a>
+
+                                <a asp-action="AddQuestion"
+                                   asp-route-examId="@exam.ID"
+                                   class="btn btn-sm btn-outline-success">
+                                    ➕ Questions
+                                </a>
+
+                             
+                            </td>
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+
+    </div>
+</div>

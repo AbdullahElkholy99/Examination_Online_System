@@ -1,0 +1,30 @@
+﻿@{
+    ViewData["Title"] = "Select Role";
+}
+<link rel="stylesheet" href="~/css/role.css" />
+
+<div class="container d-flex justify-content-center align-items-center vh-100 fade-in">
+    <div class="row w-75 text-center">
+
+        <h1 class="text-white mb-5">ITI Online Examination</h1>
+
+        <div class="col-md-6 mb-4">
+            <div class="role-card"
+                 onclick="location.href='/Home/SelectRole?role=student'">
+                <div class="role-icon">👨‍🎓</div>
+                <h3>Student</h3>
+                <p>Take exams & view results</p>
+            </div>
+        </div>
+
+        <div class="col-md-6 mb-4">
+            <div class="role-card"
+                 onclick="location.href='/Home/SelectRole?role=admin'">
+                <div class="role-icon">🧑‍💼</div>
+                <h3>Admin</h3>
+                <p>Manage exams & students</p>
+            </div>
+        </div>
+
+    </div>
+</div>

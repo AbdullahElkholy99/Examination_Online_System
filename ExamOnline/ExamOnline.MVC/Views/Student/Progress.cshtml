@@ -1,0 +1,23 @@
+﻿@{
+    Layout = "_StudentLayout";
+}
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<canvas id="progressChart"></canvas>
+
+<script>
+    const ctx = document.getElementById('progressChart');
+
+    new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: @Html.Raw(Json.Serialize(Model.Courses)),
+            datasets: [{
+                label: 'Grades',
+                data: @Html.Raw(Json.Serialize(Model.Grades)),
+                backgroundColor: '#0d6efd'
+            }]
+        }
+    });
+</script>

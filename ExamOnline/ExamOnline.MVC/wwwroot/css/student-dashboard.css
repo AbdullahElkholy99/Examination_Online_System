@@ -1,0 +1,70 @@
+﻿.dashboard-header h2 {
+    font-weight: 700;
+}
+
+.dashboard-header p {
+    font-size: 14px;
+}
+
+/* Student Selector */
+.student-selector-card {
+    max-width: 520px;
+    background: #fff;
+    border-radius: 16px;
+    padding: 25px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+}
+
+.selector-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.student-dropdown {
+    height: 48px;
+    border-radius: 12px;
+    font-weight: 500;
+}
+
+.selected-student-badge {
+    margin-top: 12px;
+    background: #2563eb;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 999px;
+    display: inline-block;
+    font-size: 14px;
+}
+
+/* Cards */
+.dashboard-card {
+    border-radius: 18px;
+    padding: 30px;
+    color: #fff;
+    height: 100%;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    transition: 0.3s;
+}
+
+    .dashboard-card:hover {
+        transform: translateY(-8px);
+    }
+
+.card-icon {
+    font-size: 38px;
+}
+
+/* Colors */
+.dashboard-card.blue {
+    background: linear-gradient(135deg, #2563eb, #1e40af);
+}
+
+.dashboard-card.green {
+    background: linear-gradient(135deg, #16a34a, #166534);
+}
+
+.dashboard-card.orange {
+    background: linear-gradient(135deg, #f59e0b, #b45309);
+}

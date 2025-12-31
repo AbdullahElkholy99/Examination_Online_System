@@ -1,0 +1,52 @@
+﻿@model AssignByTrackVM
+@{
+    Layout = "_AdminLayout";
+}
+
+<h2 class="mb-4">Assign Courses by Track</h2>
+
+@if (TempData["Success"] != null)
+{
+    <div class="alert alert-success">
+        @TempData["Success"]
+    </div>
+}
+
+<form method="post" class="card shadow-sm p-4 w-50">
+
+    <div class="mb-3">
+        <label class="form-label">Student</label>
+        <select asp-for="StudentId"
+                asp-items="Model.Students"
+                class="form-select"
+                required>
+            <option value="">-- Select Student --</option>
+        </select>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Track</label>
+        <select asp-for="TrackId"
+                asp-items="Model.Tracks"
+                class="form-select"
+                required>
+            <option value="">-- Select Track --</option>
+        </select>
+    </div>
+
+    <button class="btn btn-primary">
+          Assign Track Courses
+    </button>
+</form>
+
+<hr />
+
+<form asp-action="BulkAssignByTrack" method="post">
+    <input type="hidden" name="trackId" value="@Model.TrackId" />
+
+    <button class="btn btn-danger">
+        🔄 Assign Track Courses to ALL Students
+    </button>
+</form>
+
+

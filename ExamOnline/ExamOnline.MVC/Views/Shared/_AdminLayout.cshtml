@@ -1,0 +1,138 @@
+﻿ 
+
+@using Microsoft.AspNetCore.Http
+@inject IHttpContextAccessor HttpContextAccessor
+
+@{
+    var adminName = HttpContextAccessor.HttpContext?.Session.GetString("AdminName") ?? "Admin";
+    var currentController = ViewContext.RouteData.Values["controller"]?.ToString();
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Admin Dashboard</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+
+    <!-- Sidebar CSS -->
+    <link rel="stylesheet" href="~/css/student-sidebar.css" />
+</head>
+<body>
+
+    <!-- Mobile Navbar -->
+    <nav class="navbar navbar-dark bg-dark d-md-none">
+        <div class="container-fluid">
+            <button class="btn btn-outline-light"
+                    data-bs-toggle="offcanvas"
+                    data-bs-target="#studentSidebar">
+                ☰
+            </button>
+            <span class="navbar-brand">Admin</span>
+        </div>
+    </nav>
+
+    <!-- ===== MAIN FLEX LAYOUT ===== -->
+    <div class="layout-wrapper">
+
+        <!-- ===== LEFT SIDEBAR ===== -->
+        <aside id="studentSidebar"
+               class="sidebar offcanvas-md offcanvas-start">
+
+            <div class="sidebar-header">
+                <h4>Admin</h4>
+                @if (adminName != null)
+                {
+                    <small>Name: @adminName</small>
+                }
+            </div>
+
+            <ul class="nav flex-column sidebar-menu">
+
+                <li class="nav-item">
+                    <a asp-controller="Admin"
+                       asp-action="Dashboard"
+                       class="nav-link @(currentController == "Admin" ? "active" : "")">
+                        📊 Dashboard
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a asp-controller="AdminStudent"
+                       asp-action="Index"
+                       class="nav-link @(currentController == "AdminStudent" ? "active" : "")">
+                        👥 Students
+                    </a>
+                </li>
+
+                <li class="nav-item ms-3">
+                    <a asp-controller="AdminStudentCourse"
+                       asp-action="Assign"
+                       class="nav-link">
+                        ➕ Assign Course
+                    </a>
+                </li>
+                <li class="nav-item ms-3">
+                    <a asp-controller="AdminStudentCourse"
+                       asp-action="AssignByTrack"
+                       class="nav-link">
+                        ➕ Assign Course By Track
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a asp-controller="AdminInstructor"
+                       asp-action="Index"
+                       class="nav-link @(currentController == "AdminInstructor" ? "active" : "")">
+                        👨‍🏫 Instructors
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a asp-controller="AdminCourse"
+                       asp-action="Index"
+                       class="nav-link @(currentController == "AdminCourse" ? "active" : "")">
+                        📚 Courses
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a asp-controller="AdminExam"
+                       asp-action="Index"
+                       class="nav-link @(currentController == "AdminExam" ? "active" : "")">
+                        📝 Exams
+                    </a>
+                </li>
+
+                <li class="nav-item mt-3">
+                    <a asp-controller="Account"
+                       asp-action="Logout"
+                       class="nav-link text-danger">
+                        🚪 Logout
+                    </a>
+                </li>
+
+            </ul>
+        </aside>
+
+        <!-- ===== RIGHT CONTENT (DASHBOARD) ===== -->
+        <main class="content">
+            <div class="page-wrapper">
+                @RenderBody()
+            </div>
+        </main>
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    @RenderSection("Scripts", required: false)
+
+</body>
+</html>
+
+ 

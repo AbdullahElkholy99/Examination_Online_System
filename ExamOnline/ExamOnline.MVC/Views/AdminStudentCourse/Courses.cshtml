@@ -1,0 +1,33 @@
+﻿@model List<StudentCourseDTO>
+@{
+    Layout = "_AdminLayout";
+}
+
+<h3>📋 Student Courses</h3>
+
+<table class="table table-bordered mt-3">
+    <thead class="table-dark">
+        <tr>
+            <th>Course</th>
+            <th>Duration</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var c in Model)
+        {
+            <tr>
+                <td>@c.Name</td>
+                <td>@c.Duration</td>
+                <td>
+                    <a asp-action="RemoveCourse"
+                       asp-route-studentId="@ViewBag.StudentId"
+                       asp-route-courseId="@c.ID"
+                       class="btn btn-danger btn-sm">
+                        ❌ Remove
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

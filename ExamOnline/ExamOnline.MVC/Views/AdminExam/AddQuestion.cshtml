@@ -1,0 +1,36 @@
+﻿@model QuestionCreateVM
+@{
+    Layout = "_AdminLayout";
+}
+
+<h3>Add Question</h3>
+
+<form method="post">
+    <input type="hidden" asp-for="ExamId" />
+
+    <label>Question</label>
+    <textarea asp-for="QuestionText" class="form-control"></textarea>
+
+    <label>Type</label>
+    <select asp-for="QuestionType" class="form-select">
+        <option value="MCQ">MCQ</option>
+        <option value="TF">True / False</option>
+    </select>
+
+    <label>Marks</label>
+    <input asp-for="Marks" class="form-control" />
+
+    <hr />
+
+    <h5>Choices</h5>
+    @for (int i = 0; i < Model.Choices.Count; i++)
+    {
+        <div class="mb-2 d-flex">
+            <input asp-for="Choices[i].Text" class="form-control me-2" />
+            <input asp-for="Choices[i].IsCorrect" type="checkbox" /> Correct
+        </div>
+    }
+
+
+    <button class="btn btn-success mt-3">Save Question</button>
+</form>

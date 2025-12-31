@@ -1,0 +1,14 @@
+﻿<h3>@Model.Name</h3>
+
+<a asp-controller="AdminStudentCourse"
+   asp-action="Courses"
+   asp-route-id="@Model.Id"
+   class="btn btn-primary">
+    📋 View Courses
+</a>
+
+<a asp-controller="AdminStudentCourse"
+   asp-action="Assign"
+   class="btn btn-success">
+    ➕ Assign Course
+</a>

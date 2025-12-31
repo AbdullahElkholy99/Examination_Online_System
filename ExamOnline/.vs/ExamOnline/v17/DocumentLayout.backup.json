@@ -1,0 +1,131 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "H:\\05_ITI\\9 Months\\04_DataBase\\Project\\Interface\\ExamOnline\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{82AEE2D8-F128-4F9A-A80E-242A05AE320E}|ExamOnline.MVC\\ExamOnline.MVC.csproj|h:\\05_iti\\9 months\\04_database\\project\\interface\\examonline\\examonline.mvc\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{82AEE2D8-F128-4F9A-A80E-242A05AE320E}|ExamOnline.MVC\\ExamOnline.MVC.csproj|solutionrelative:examonline.mvc\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82AEE2D8-F128-4F9A-A80E-242A05AE320E}|ExamOnline.MVC\\ExamOnline.MVC.csproj|h:\\05_iti\\9 months\\04_database\\project\\interface\\examonline\\examonline.mvc\\views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{82AEE2D8-F128-4F9A-A80E-242A05AE320E}|ExamOnline.MVC\\ExamOnline.MVC.csproj|solutionrelative:examonline.mvc\\views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82AEE2D8-F128-4F9A-A80E-242A05AE320E}|ExamOnline.MVC\\ExamOnline.MVC.csproj|h:\\05_iti\\9 months\\04_database\\project\\interface\\examonline\\examonline.mvc\\views\\adminstudent\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{82AEE2D8-F128-4F9A-A80E-242A05AE320E}|ExamOnline.MVC\\ExamOnline.MVC.csproj|solutionrelative:examonline.mvc\\views\\adminstudent\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82AEE2D8-F128-4F9A-A80E-242A05AE320E}|ExamOnline.MVC\\ExamOnline.MVC.csproj|h:\\05_iti\\9 months\\04_database\\project\\interface\\examonline\\examonline.mvc\\repositories\\implement\\select\\trackrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82AEE2D8-F128-4F9A-A80E-242A05AE320E}|ExamOnline.MVC\\ExamOnline.MVC.csproj|solutionrelative:examonline.mvc\\repositories\\implement\\select\\trackrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82AEE2D8-F128-4F9A-A80E-242A05AE320E}|ExamOnline.MVC\\ExamOnline.MVC.csproj|h:\\05_iti\\9 months\\04_database\\project\\interface\\examonline\\examonline.mvc\\controllers\\adminstudentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82AEE2D8-F128-4F9A-A80E-242A05AE320E}|ExamOnline.MVC\\ExamOnline.MVC.csproj|solutionrelative:examonline.mvc\\controllers\\adminstudentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82AEE2D8-F128-4F9A-A80E-242A05AE320E}|ExamOnline.MVC\\ExamOnline.MVC.csproj|h:\\05_iti\\9 months\\04_database\\project\\interface\\examonline\\examonline.mvc\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82AEE2D8-F128-4F9A-A80E-242A05AE320E}|ExamOnline.MVC\\ExamOnline.MVC.csproj|solutionrelative:examonline.mvc\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "H:\\05_ITI\\9 Months\\04_DataBase\\Project\\Interface\\ExamOnline\\ExamOnline.MVC\\Program.cs",
+              "RelativeDocumentMoniker": "ExamOnline.MVC\\Program.cs",
+              "ToolTip": "H:\\05_ITI\\9 Months\\04_DataBase\\Project\\Interface\\ExamOnline\\ExamOnline.MVC\\Program.cs",
+              "RelativeToolTip": "ExamOnline.MVC\\Program.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAArwA4AAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-29T14:00:41.1Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AdminStudentController.cs",
+              "DocumentMoniker": "H:\\05_ITI\\9 Months\\04_DataBase\\Project\\Interface\\ExamOnline\\ExamOnline.MVC\\Controllers\\AdminStudentController.cs",
+              "RelativeDocumentMoniker": "ExamOnline.MVC\\Controllers\\AdminStudentController.cs",
+              "ToolTip": "H:\\05_ITI\\9 Months\\04_DataBase\\Project\\Interface\\ExamOnline\\ExamOnline.MVC\\Controllers\\AdminStudentController.cs",
+              "RelativeToolTip": "ExamOnline.MVC\\Controllers\\AdminStudentController.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAuwFkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-31T10:13:02.69Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "H:\\05_ITI\\9 Months\\04_DataBase\\Project\\Interface\\ExamOnline\\ExamOnline.MVC\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "ExamOnline.MVC\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "H:\\05_ITI\\9 Months\\04_DataBase\\Project\\Interface\\ExamOnline\\ExamOnline.MVC\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "ExamOnline.MVC\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAAC4AAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-31T13:32:12.142Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TrackRepository.cs",
+              "DocumentMoniker": "H:\\05_ITI\\9 Months\\04_DataBase\\Project\\Interface\\ExamOnline\\ExamOnline.MVC\\Repositories\\Implement\\Select\\TrackRepository.cs",
+              "RelativeDocumentMoniker": "ExamOnline.MVC\\Repositories\\Implement\\Select\\TrackRepository.cs",
+              "ToolTip": "H:\\05_ITI\\9 Months\\04_DataBase\\Project\\Interface\\ExamOnline\\ExamOnline.MVC\\Repositories\\Implement\\Select\\TrackRepository.cs",
+              "RelativeToolTip": "ExamOnline.MVC\\Repositories\\Implement\\Select\\TrackRepository.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAywBwAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-31T13:16:18.356Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "H:\\05_ITI\\9 Months\\04_DataBase\\Project\\Interface\\ExamOnline\\ExamOnline.MVC\\Views\\AdminStudent\\Create.cshtml",
+              "RelativeDocumentMoniker": "ExamOnline.MVC\\Views\\AdminStudent\\Create.cshtml",
+              "ToolTip": "H:\\05_ITI\\9 Months\\04_DataBase\\Project\\Interface\\ExamOnline\\ExamOnline.MVC\\Views\\AdminStudent\\Create.cshtml",
+              "RelativeToolTip": "ExamOnline.MVC\\Views\\AdminStudent\\Create.cshtml",
+              "ViewState": "AgIAAD4AAAAAAAAAAAAwwFYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-31T10:39:23.15Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "_AdminLayout.cshtml",
+              "DocumentMoniker": "H:\\05_ITI\\9 Months\\04_DataBase\\Project\\Interface\\ExamOnline\\ExamOnline.MVC\\Views\\Shared\\_AdminLayout.cshtml",
+              "RelativeDocumentMoniker": "ExamOnline.MVC\\Views\\Shared\\_AdminLayout.cshtml",
+              "ToolTip": "H:\\05_ITI\\9 Months\\04_DataBase\\Project\\Interface\\ExamOnline\\ExamOnline.MVC\\Views\\Shared\\_AdminLayout.cshtml",
+              "RelativeToolTip": "ExamOnline.MVC\\Views\\Shared\\_AdminLayout.cshtml",
+              "ViewState": "AgIAAHQAAAAAAAAAAAAwwIIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-31T13:08:21.767Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

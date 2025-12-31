@@ -1,0 +1,96 @@
+﻿@model ExamDetailsVM
+@{
+    Layout = "_AdminLayout";
+}
+    
+<h2 class="mb-3">📝 Exam Details</h2>
+
+<div class="card mb-4 shadow-sm">
+    <div class="card-body">
+        <p><strong>Course:</strong> @Model.CourseName</p>
+        <p><strong>Type:</strong> @Model.ExamType</p>
+        <p><strong>Total Marks:</strong> @Model.TotalMarks</p>
+
+        <p>
+            <strong>Status:</strong>
+            @if (Model.IsClosed)
+            {
+                <span class="badge bg-danger">Closed</span>
+            }
+            else
+            {
+                <span class="badge bg-success">Open</span>
+            }
+        </p>
+
+        <a asp-action="AddQuestion"
+           asp-route-examId="@Model.ExamId"
+           class="btn btn-primary">
+            ➕ Add Question
+        </a>
+    </div>
+</div>
+
+<hr />
+
+<h4>📋 Questions</h4>
+
+@if (!Model.Questions.Any())
+{
+    <div class="alert alert-warning">
+        No questions added yet.
+    </div>
+}
+else
+{
+    int qNo = 1;
+    foreach (var q in Model.Questions)
+    {
+        <div class="card mb-4 shadow-sm">
+            <div class="card-body">
+
+                <h5>
+                    Q@qNo. @q.QuestionText
+                    <span class="badge bg-secondary ms-2">
+                        @q.Marks Marks
+                    </span>
+                </h5>
+
+                <p class="text-muted">
+                    Type: @q.QuestionType
+                </p>
+
+                <ul class="list-group mb-3">
+                    @foreach (var c in q.Choices)
+                    {
+                        <li class="list-group-item d-flex justify-content-between
+                                        @(c.IsCorrect ? "list-group-item-success" : "")">
+                            @c.Text
+                            @if (c.IsCorrect)
+                            {
+                                <span>✔</span>
+                            }
+                        </li>
+                    }
+                </ul>
+
+                <div class="d-flex gap-2">
+                    <a asp-action="EditQuestion"
+                       asp-route-id="@q.QuestionId"
+                       class="btn btn-sm btn-outline-warning">
+                        ✏ Edit
+                    </a>
+
+                    <a asp-action="Delete"
+                       asp-route-id="@q.QuestionId"
+                       class="btn btn-sm btn-outline-danger"
+                       onclick="return confirm('Delete this question?');">
+                        🗑 Delete
+                    </a>
+                </div>
+
+            </div>
+        </div>
+        qNo++;
+    }
+}
